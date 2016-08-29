@@ -1,0 +1,101 @@
+@import "reset.css";
+
+/*
+  ========================================
+  Basic styles  
+  ========================================
+*/
+body {
+	font: 16px 'Open Sans', Arial, sans-serif;
+	color: #7f8c8d;
+	background: #ecf0f1;
+}
+
+/*
+  ========================================
+  Header  
+  ========================================
+*/
+.main-header {
+	text-align: center;
+	margin: 40px 0 40px;
+	border-bottom: 1px solid #e4e6e6;
+}
+h1 {
+	font-family: 'Baloo Paaji', cursive;
+	font-size: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #16a085;
+}
+h1 em {
+	color: #dedede;
+}
+h2 {
+	margin-bottom: 40px;
+}
+
+/*
+  ========================================
+  Canvas  
+  ========================================
+*/
+.game-canvas {
+	width: 600px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+
+/*
+  ========================================
+  Score  
+  ========================================
+*/
+.game-score {
+	width: 600px;
+	margin: 0 auto;
+	overflow: auto;
+}
+.score-box {
+	float: left;
+	width: 300px;
+	text-align: center;
+}
+.score-box + .score-box {
+	float: right;
+}
+.title {
+	font-size: 22px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.score {
+	font: 62px 'Baloo Paaji', cursive;
+	color: #16a085;
+}
+
+/*
+  ========================================
+  Author  
+  ========================================
+*/
+.author {
+	margin: 50px auto;
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	color: inherit;
+	display: block;
+	width: 200px;
+	padding: 10px 0;
+	border: 1px solid #ecf0f1;
+	border-radius: 4px;
+	transition: all .2s ease;
+}
+.author strong {
+	font-weight: 700;
+}
+.author:hover {
+	border: 1px solid #16a085;
+}
