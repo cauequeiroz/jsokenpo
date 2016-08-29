@@ -45,7 +45,31 @@ h2 {
 	height: 300px;
 	margin: 0 auto;
 }
-
+.user-choice ul {
+	overflow: auto;
+}
+.user-choice ul li {
+	display: block;
+	float: left;
+	width: 193px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	border: 1px solid #7f8c8d;
+	border-radius: 4px;
+	margin: 10px 10px 0 0;
+	transition: all .1s ease;
+}
+.user-choice ul li:last-child {
+	margin-right: 0;
+}
+.user-choice ul li:hover,
+.user-choice ul li.selected {
+	cursor: pointer;
+	background: #16a085;
+	color: #ecf0f1;
+	border-color: #16a085;
+}
 
 /*
   ========================================
