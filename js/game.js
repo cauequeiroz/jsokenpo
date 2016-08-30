@@ -103,10 +103,10 @@
 				game.score[1]++;
 			}
 
+			var	elem  = document.querySelectorAll('.score'),
+				score = 0;
+				
 			for (var i=0; i<2; i++) {
-				var	elem  = document.querySelectorAll('.score'),
-				    score = 0;
-
 				if ( game.score[i] < 10 ) {
 					score = '0'+game.score[i];
 				} else {
