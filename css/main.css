@@ -44,6 +44,7 @@ h2 {
 	width: 600px;
 	height: 300px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .user-choice ul {
@@ -73,8 +74,12 @@ h2 {
 }
 
 .choice-board {
+	opacity: 0;
 	float: left;
 	margin: 40px 0 0;
+}
+.choice-board.show {
+	transition: opacity .2s ease;
 }
 .choice-board p {
 	line-height: 1.8;
@@ -85,10 +90,10 @@ h2 {
 }
 
 .result	{
+	opacity: 0;
 	float: right;
 	width: 300px;
 	height: 50px;
-	background: #7f8c8d;
 	margin-top:	40px;
 	color: #fff;
 	font: 22px 'Baloo Paaji', cursive;
@@ -97,9 +102,28 @@ h2 {
 	line-height: 50px;
 	border-radius: 4px;
 }
-.result.defeat { background: #e74c3c; }
-.result.win    { background: #2ecc71; }
+.result.show 	 { transition: opacity .2s ease 1s; }
+.result.computer { background: #e74c3c; }
+.result.user     { background: #2ecc71; }
+.result.tie      { background: #7f8c8d; }
 
+.show {
+	opacity: 1;
+}
+
+.loader {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	width: 0%;
+	height: 5px;
+	background: #16a085;
+	margin-top: 30px;
+}
+.loader.start {
+	width: 100%;
+	transition: width 2s linear 1s;
+}
 /*
   ========================================
   Score  
