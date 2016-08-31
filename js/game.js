@@ -46,27 +46,13 @@
 
 			if ( game.user === game.computer ) {
 				game.winner = 'tie';
-			}
-			else if ( game.user === 'rock' ) {
-				if ( game.computer === 'scissor' ) {
-					game.winner = 'user';
-				} else {
-					game.winner = 'computer';
-				}
-			}
-			else if ( game.user === 'paper' ) {
-				if ( game.computer === 'rock' ) {
-					game.winner = 'user';
-				} else {
-					game.winner = 'computer';
-				}
-			}
-			else if ( game.user === 'scissor' ) {
-				if ( game.computer === 'paper' ) {
-					game.winner = 'user';
-				} else {
-					game.winner = 'computer';
-				}
+			} else {
+				var wins = {
+					'rock': 'scissor',
+					'scissor': 'paper',
+					'paper': 'rock'
+				};
+				game.winner = (wins[game.user] === game.computer) ? 'user' : 'computer';
 			}
 
 			game.showResult();
