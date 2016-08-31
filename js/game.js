@@ -22,22 +22,14 @@
 			game.computerChoice();
 		},
 		computerChoice: function() {
-			var n   = Math.floor(1 + Math.random() * (3 - 1 + 1)),
-				str = '';
+			var n = Math.floor(1 + Math.random() * (3 - 1 + 1)),
+				choice = {
+					'1': 'rock',
+					'2': 'paper',
+					'3': 'scissor' 
+				};				
 
-			switch(n) {
-				case 1:
-					str = 'rock';
-					break;
-				case 2:
-					str = 'paper';
-					break;
-				case 3:
-					str = 'scissor';
-					break;
-			}
-
-			game.computer = str;
+			game.computer = choice[n];
 			game.compareChoice();
 		},
 		compareChoice: function() {
